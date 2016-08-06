@@ -23,7 +23,3 @@ html5shiv.js (@afarkas @jdalton @jon_neal @rem)
 Misc. Sass functions (@HugoGiraudel)
 Respond.js (j.mp/respondjs)
 Skel (skel.io)
-
-Timeline Javascript:
-Timeline made using the framework written by Alvaro Graves, https://github.com/alangrafu/timeknots
-This timeline was made with D3.js
