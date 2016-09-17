@@ -10,7 +10,7 @@ var movers = [];
 var liquid;
 
 function setup() {
-  createCanvas(425, 500);
+  createCanvas(425, 400);
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);
