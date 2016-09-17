@@ -57,9 +57,9 @@ function draw() {
 
 }
 
-function keyReleased() {
-  if (key==' ') {
+function mousePressed() {
+  //if (key==' ') {
     trace = !trace;
     background(255);
-  }
+  //}
 }
