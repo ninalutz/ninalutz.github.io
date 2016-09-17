@@ -7,6 +7,10 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js">
+</script>
+<script type="text/javascript" src="scripts.js">
+</script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -49,8 +53,60 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Portfolio</h1>
-							<p> Please forgive the mess; I'm currently making an awesome portfolio page. </p>
-
+							<p> Please forgive the mess; I'm currently making an awesome portfolio page. This is just a temporary work around. </p>
+							<p> Click the nodes to collapse and uncollapse. Scroll down for details on projects. </p>
+							<p>While I build a more sophisticated and detailed mechanic, feel free to explore this more bare bones list of details about my projects.</p>
+							<div id="listContainer">
+									<div class="listControl">
+											<a id="expandList">Expand All</a>
+											<a id="collapseList">Collapse All</a>
+									</div>
+									<ul id="expList">
+											<li>
+													Item A
+													<ul>
+															<li>
+																	Item A.1
+																	<ul>
+																			<li>
+																					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+																			</li>
+																	</ul>
+															</li>
+															<li>
+																	Item A.2
+															</li>
+															<li>
+																	Item A.3
+																	<ul>
+																			<li>
+																					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+																			</li>
+																	</ul>
+															</li>
+													</ul>
+											</li>
+											<li>
+													Item B
+											</li>
+											<li>
+													Item C
+													<ul>
+															<li>
+																	Item C.1
+															</li>
+															<li>
+																	Item C.2
+																	<ul>
+																			<li>
+																					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+																			</li>
+																	</ul>
+															</li>
+													</ul>
+											</li>
+									</ul>
+							</div>
 						</div>
 					</div>
 
