@@ -1,4 +1,4 @@
-var NUMSINES = 20;
+var NUMSINES = 7;
 var sines = new Array(NUMSINES); // an array to hold all the current angles
 var rad; // an initial radius value for the central sine
 var i;
@@ -7,7 +7,7 @@ var fund = 0.003; // the speed of the central sine
 var ratio = 1; // speed multiplier
 var alpha = 50;
 
-var trace = false; 
+var trace = false;
 
 function setup() {
   createCanvas(300, 200);
@@ -23,7 +23,7 @@ function setup() {
 function draw() {
   if (!trace) {
     background(255); // clear screen if showing geometry
-    stroke(88, 255); 
+    stroke(88, 255);
     noFill(); //don't fill
   }
 
