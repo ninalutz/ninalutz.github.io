@@ -40,30 +40,93 @@
 
 var treeData = [
   {
-    "name": "Top Level",
+    "name": "Classes",
     "parent": "null",
     "children": [
       {
-        "name": "Level 2: A",
-        "parent": "Top Level",
+        "name": "Software",
+        "parent": "Classes",
         "children": [
           {
-            "name": "Son of A",
-            "parent": "Level 2: A"
+            "name": "Programming",
+            "parent": "Software",
+            "children": [
+              {
+                "name": "6.0001: Python",
+                "parent": "Programming"
+              },
+              {
+                "name": "6.031*: Software Construction (formerly 6.005)",
+                "parent": "Programming"
+              },
+            ]
           },
           {
-            "name": "Daughter of A",
-            "parent": "Level 2: A"
+            "name": "Modeling, AI, Complexity",
+            "parent": "Software",
+            "children": [
+              {
+                "name": "6.336: Numerical Simulation",
+                "parent": "Modeling, AI, Complexity"
+              },
+              {
+                "name": "6.036*: Machine Learning",
+                "parent": "Modeling, AI, Complexity"
+              },
+              {
+                "name": "6.041: Applied Probability",
+                "parent": "Modeling, AI, Complexity"
+              },
+            ]
+          },
+
+          {
+            "name": "6.S08*: Embedded Systems",
+            "parent": "Software"
           }
         ]
       },
       {
-        "name": "Level 2: B",
-        "parent": "Top Level"
-      }
+        "name": "Hardware",
+        "parent": "Classes",
+        "children": [
+          {
+            "name": "6.004: Computational Structures (Assembly, systems archiectures)",
+            "parent": "Classes"
+          },
+          {
+            "name": "6.S08*: Embedded Systems",
+            "parent": "Classes"
+          },
+          {
+            "name": "MAS.836*: Sensors and Environments",
+            "parent": "Classes"
+          }
+        ]
+      },
+      {
+        "name":"Design",
+        "parent": "Classes",
+        "children":
+[
+  {
+    "name": "4.031: Design Studio",
+    "parent": "Classes"
+  },
+  {
+    "name": "MAS.110: Foundations of Computational Design",
+    "parent": "Classes"
+  },
+  {
+    "name": "CMS.634*: Desigining Interactions",
+    "parent": "Classes"
+  }
+]      },
+
     ]
   }
 ];
+
 
 
 // ************** Generate the tree diagram	 *****************
