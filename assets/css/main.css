@@ -1863,7 +1863,7 @@
 	.icon {
 		text-decoration: none;
 		border-bottom: none;
-		position: relative;
+		position: fixed;
 	}
 
 		.icon:before {
@@ -1877,6 +1877,7 @@
 
 		.icon > .label {
 			display: none;
+					position: fixed;
 		}
 
 		.icon.style2 {
