@@ -1,16 +1,263 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>N. Lutz</title>
-</head>
-<body>
 
-<h1>Hello. </h1>
-<p>My name is Nina Lutz and I am a rising junior studying Computer Science and Design at MIT.</p>
-<p>I do research at the MIT Media Lab and I am currently interning at Apple.</p>
-<p>You may notice this page is...sparse. This is because I am currently in the process of rebooting my entire portfolio this summer.</p>
-<p>Please check back in September for the new site.</p>
-<p>Until then, please contact me <a href = mailto:nlutz@mit.edu> via email </a> for work samples and other inquiries.</p>
-<iframe src="https://alpha.editor.p5js.org/embed/SkazlZXtl" width="410" height="410"></iframe>
-</body>
+<html>
+<style>
+body {
+    background: lightgrey;
+    }
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+h2{
+    color: lightblue;
+    font-family: verdana;
+    font-size: 12px;
+}
+
+.grid {
+    position: center;
+    margin: 0 auto;
+    float: center;
+    padding: 1em 10em 1em 10em;
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 200px;
+    max-width: 20%;
+    max-height: 300px;
+    width: 100%;
+    background:#f4424e;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 50%;
+    white-space: wrap;
+    font-size: 0;
+    opacity: .2;
+}
+
+
+.grid figure h2 span {
+    font-weight: 70;
+    word-wrap: break-word;
+}
+
+.grid figure h2,
+.grid figure p {
+        word-wrap: break-word;
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+
+figure.trans-effect img {
+    max-width: none;
+    width: -webkit-calc(100% + 50px);
+    width: calc(100% + 50px);
+    opacity: .4;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px,0, 0);
+    transform: translate3d(-40px,0,0);
+}
+
+figure.trans-effect figcaption {
+    text-align: left;
+        word-wrap: break-word;
+}
+
+figure.trans-effect figcaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5em;
+    width: 100%;
+    height: 50%;
+    word-wrap: break-word;
+}
+
+figure.trans-effect h2,
+figure.trans-effect p {
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+
+figure.trans-effect h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.trans-effect p {
+    color: rgba(255,255,255,1);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.trans-effect:hover img,
+figure.trans-effect:hover p {
+    opacity: 1;
+        word-wrap: break-word;
+}
+
+figure.trans-effect:hover img,
+figure.trans-effect:hover h2,
+figure.trans-effect:hover p {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+        word-wrap: break-word;
+}
+
+figure.trans-effect:hover p {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+        word-wrap: break-word;
+}
+
+.content{
+    padding: 50px 30px 50px 80px;
+}
+
+
+
+</style>
+
+<div class="container">
+    <div class="content">
+
+    <h1>IN PROGRESS</h1>
+        <div class="grid">
+            <figure class="trans-effect">
+                <img src = "geo5.JPG"/>
+                <figcaption>
+                    <div>
+                        <h2>Research</h2>
+
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            <figure class="trans-effect">
+                <img src = "gis.png"/>
+                <figcaption>
+                    <div>
+                         <h2>GIS</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+                        <figure class="trans-effect">
+                <img src = "comp.png"/>
+                <figcaption>
+                    <div>
+                          <h2>Computer Graphics </h2>
+                   </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+             <figure class="trans-effect">
+                <img src = "desk.jpg"/>
+                <figcaption>
+                    <div>
+                         <h2>Architecture and Furniture</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+        </div>
+      <div class="grid">
+          <figure class="trans-effect">
+                <img src = "weather.png"/>
+                <figcaption>
+                    <div>
+                     <h2>Data Visualization and Stories</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+          <figure class="trans-effect">
+                <img src = "hilbert.jpg"/>
+                <figcaption>
+                    <div>
+                    <h2>Physical and Wearable Works</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+              <figure class="trans-effect">
+                <img src = "sine.png"/>
+                <figcaption>
+                    <div>
+                         <h2>Art and Concepts</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+                      <figure class="trans-effect">
+                <img src = "cs101.png"/>
+                <figcaption>
+                    <div>
+                    <h2>Teaching</h2>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            </div>
+    </div>
+</div><!-- /container -->
+
 </html>
