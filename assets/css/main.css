@@ -3901,6 +3901,17 @@
 
 		}
 
+/* Featured */
+
+	#info {
+		background-attachment: fixed;
+		background-image: url("images/intro.svg");
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+
 /* Tiles */
 
 	.tiles {
@@ -4055,7 +4066,7 @@
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf6;
+				background-color: #ef4f6c;
 			}
 
 			.tiles article.style3 > .image:before {
