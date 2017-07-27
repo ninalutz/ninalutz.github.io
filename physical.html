@@ -125,14 +125,55 @@
 				<div class="inner">
 					<br>
 					<h2>MedWatch</h2>
-					<p>Coming soon. </p>
+					<p>More coming soon!</p>
+					<p> This was a final project for my Embedded Systems class. I worked in a team of four to design and fabricate a medical watch prototype. </p>
 					</div>
 			</section>
 			<section id="tattoos" class="wrapper style1 fade-up">
 				<div class="inner">
 					<br>
 					<h2>Pediatric Electronic Tattoos</h2>
-					<p>Coming soon. </p>
+						<p>Remember when you were a kid and got a fun cast or sticker when you when to the doctor?
+							What if that feeling could be reproduced digitally to make hospital stays more fun for kids and serve as a useful way for medical professionals to monitor and communicate with their patients.</p>
+						<p>
+						<center><img align="middle" src="images/tattoo/tat1.jpg" style="width:80%"> </center>
+						<p>
+
+						<p>I was lucky enough to be part of a team of 2 other students at the MIT Media Lab in a workshop led by Cindy Kao, the inventor of DuoSkin. Throughout the workshop we learned the DuoSkin fabrication process of fabricating conductive tattoos that are ready to be designed into integrated, interactive electronics. </p>
+
+						<p> We wanted to create a fun temporary tattoo for children to communicate and log their pain readings with their medical providers.</p>
+
+						<p>The overall system involves a tattoo, GUI, and web server. The tattoo, even though is in conductive with embedded electronics, is applied just like a traditional temporary tattoo. In the hospital setting they’d probably last about a week. </p>
+
+						<p>My team designed a bear tattoo, with two buttons. Another member of my team designed the bear and button icons. This was the design, as done by Josh Woodward. </p>
+						<p>
+						<center><img align="middle" src="images/tattoo/bear.png" style="width:80%"> </center>
+						<p>
+						<p> Overall, the user can press down on the part of the bear where they are in pain; the longer they press the higher the pain reading. They also have two buttons they can press; the bell, which calls the doctor, and the report button which starts the recording process. An LED confirms when these buttons are pressed or when a doctor is going to come visit them.</p>
+
+						<p> This is what the tattoo looked like when it was fabricated.</p>
+						<p>
+						<center><img align="middle" src="images/tattoo/tat2.jpg" style="width:80%"> </center>
+						<p>
+						<p> We put it on a mannequin arm because it was easier for debugging. The wires from the tattoo go around the arm where there is a small micro controller and Bluetooth chip for logic and a small 3V battery. The whole thing is about 2 by 3 inches and is extremely light and flat and easy to mount on the skin by using medical or athletic tape. </p>
+
+						<p> We integrated the circuit inside the bear to be capacitive touch logic. This logic was communicated via bluetooth to the software where the pain readings were logged and stored in an easy to use web server. </p>
+
+						<p> Here’s a GIF of the tattoo in action! </p>
+						<p>
+						<center><img align="middle" src="images/tattoo/Tattoo.gif" style="width:80%"> </center>
+						<p>
+						<p> Inside the software the doctors can see their patients and if the patient is requesting a doctor, they get a notification on the home screen. </p>
+						<p>
+						<center><img align="middle" src="images/tattoo/tat3.png" style="width:80%"> </center>
+						<p>
+						<p> Each patient has a profile with real time data recordings and is also connected to the web server where the doctor can view more detailed reports of the patient. </p>
+						<p>
+						<center><img align="middle" src="images/tattoo/tat4.png" style="width:80%"> </center>
+						<p>
+						<p> I was personally responsible for the capacitive sensing logic and calibration, communication with the software and web server, and design of the GUI. My other teammate designed the tattoo and fabricated it. Another teammate configured the Bluetooth with the software and built the web server. </p>
+
+						<p> All the code is on <a href = "https://github.com/ninalutz/PediatricDuoSkinTattoos">GitHub</a>. Overall this was an awesomely fun project and I was so happy to be involved. </p>
 					</div>
 			</section>
 			<section id="lsystems" class="wrapper style1 fade-up">
@@ -151,8 +192,8 @@
 					 <img src ="images/jenga/jenga2.jpg" width = "40%"></img>
 					<p>There are 3 stakeholders; environmentalists (pink pieces), politicians (green pieces), and human factors (representing fossil fuel companies, etc). While staying in the confines of their roles, the players want to prevent the tower from falling as long as possible.</p>
 
-										<img src ="images/jenga/jenga4.jpg" width = "40%"></img>
-						<img src ="images/jenga/jenga6.jpg" width = "40%"></img>
+					<img src ="images/jenga/jenga4.jpg" width = "40%"></img>
+					<img src ="images/jenga/jenga6.jpg" width = "40%"></img>
 
 
 					<p>Player rules…
@@ -164,18 +205,18 @@
 					</p>
 					<p>The factors player represents the human factors constantly adding instability to the system. It is the job of the other two players to counteract this.</p>
 
-<p>While politicians have a lot of power, they can’t change the system completely by performing additions. Also they are confined to moves that are dictated by their constituents and party (they can only move the green tiles). Therefore, their stabilizing effort is very slow and, could be, destructive.</p>
+					<p>While politicians have a lot of power, they can’t change the system completely by performing additions. Also they are confined to moves that are dictated by their constituents and party (they can only move the green tiles). Therefore, their stabilizing effort is very slow and, could be, destructive.</p>
 					<img src ="images/jenga/jenga5.jpg" width = "40%"></img>
-<img src ="images/jenga/jenga1.jpg" width = "40%"></img>
+					<img src ="images/jenga/jenga1.jpg" width = "40%"></img>
 
-<p>While environmentalists have the power and knowledge to do good and help the system, this is slowed down by politics and destructive human factors. Furthermore, they have less influence than corporations or politicians, and therefore less tiles.</p>
-<p>Player learning…
-<ul>
-<li>The first surface level learning comes from the pieces themselves, which all have different facts on them. The environmentalist tiles also have suggestions on them.</li>
+					<p>While environmentalists have the power and knowledge to do good and help the system, this is slowed down by politics and destructive human factors. Furthermore, they have less influence than corporations or politicians, and therefore less tiles.</p>
+					<p>Player learning…
+					<ul>
+					<li>The first surface level learning comes from the pieces themselves, which all have different facts on them. The environmentalist tiles also have suggestions on them.</li>
 
-<li>However the deeper level is understanding how these role confines actually represent the current system and the issues within it.</li>
-</ul>
-</p>
+					<li>However the deeper level is understanding how these role confines actually represent the current system and the issues within it.</li>
+					</ul>
+					</p>
 					</div>
 			</section>
 
