@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Road To Paris</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+</head>
+<body>
+    <main>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Event</th>
+                    <th>URL</th>
+                    <th>IP</th>
+                    <th>Platform</th>
+                    <th>City</th>
+                    <th>Zip Code</th>
+                    <th>Country</th>
+                    <th>Event Data</th>
+                </tr>
+            </thead>
+            <tr v-for="el in json">
+                <td>{{el.context.timestamp}}</td>
+                <td>{{el.data.event}}</td>
+                <td>{{el.context.location.href}}</td>
+                <td>{{el.context.ip_info.ip}}</td>
+                <td>{{el.context.navigator.platform}}</td>
+                <td>{{el.context.ip_info.city}}</td>
+                <td>{{el.context.ip_info.country_name}}</td>
+                <td>{{el.context.ip_info.zip_code}}</td>
+                <td>{{el.data}}</td>
+            </tr>
+        </table>
+    </main>
+    <script>
+        var vm = new Vue({
+            el: "main",
+            data: {
+                json: []
+            }
+        })
+        $.get("https://api.myjson.com/bins/toguh", function (json) {
+            vm.json = json;
+        })
+    </script>
+</body>
+</html>
