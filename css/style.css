@@ -557,6 +557,7 @@ b i:last-child {
     position: absolute;
     white-space: nowrap;
     left: 0;
+    align: middle;
     top: 0;
 }
 
