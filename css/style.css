@@ -78,6 +78,7 @@ a {
 
 }
 
+
 a:hover {
     color: #000000;
 }
@@ -157,13 +158,13 @@ h5 {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-animation: bounce 2.0s infinite ease-in-out;
-    animation: bounce 2.0s infinite ease-in-out;
+    -webkit-animation: bounce 1.0s infinite ease-in-out;
+    animation: bounce 1.0s infinite ease-in-out;
 }
 
 .double-bounce2 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
 }
 
 @-webkit-keyframes bounce {
