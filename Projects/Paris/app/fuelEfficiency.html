@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyB9R73RQs2X2n3J8xpPKez_1hotrCwInH8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+
+    <title>Car Fuel Efficiency Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+      body {
+        background: #f5f5f5;
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+      }
+
+      #carSelection {
+        display: block;
+        padding: 10px;
+      }
+
+      .car {
+        width: 100px;
+        height: 100px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px 10px 10px 0;
+      }
+
+      .car img{
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .carLabel {
+        font-size: 12px;
+      }
+      
+      select {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .percentile_label {
+        padding: 0.5em;
+      }
+
+      .percentile {
+        display: inline-block;
+        width: 19.5%;
+        height: 100%;
+      }
+
+      #draggable {
+        width: 100px;
+        height: 100px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px 10px 10px 0;
+      }
+
+      #draggable img{
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .carLabel {
+        font-size: 12px;
+      }
+
+      #droppable {
+        width: 100%;
+        height: 150px;
+      }
+
+      #result {
+        padding: 10px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/car_data.js"></script>
+    <script src="../js/logger.js"></script>
+    <script>
+
+      var getCarInfo = function () {
+          var mfr = $("#manufacturer")[0].options[$("#manufacturer")[0].selectedIndex].text
+          var car = $("#carType")[0].options[$("#carType")[0].selectedIndex].text
+          return car_data.filter(
+            function(c){ return c.mfr == mfr && c.car == car }
+          )[0];
+      };
+
+      function getCarOptions(mfr) {
+        return car_data.filter(
+          function(c){ return c.mfr == mfr }
+        );
+      }
+
+      $( function() {
+        // Set up the text
+        $(".result").hide();
+        $("#garage").hide();
+
+        // Set up the car selection
+        metadata.forEach(function(c) {
+          $("#manufacturer").append("<option>" + c.mfr +"</option>");
+
+        });
+        $("#manufacturer")[0].selectedIndex = 0;
+        $("#carType").append("<option disabled>Car Make and Model</option>");
+        $("#carType")[0].selectedIndex = 0;
+
+        // getCarOptions("aston martin").forEach(function(c) {
+        //   $("#carType").append("<option>" + c.car + "</option>");
+        // })
+
+        // Set up the drag and drop game
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+          drop: function( event, ui ) {
+            var OFFSET = 20;
+            console.log(event);
+            var percentage = ((ui.offset.left + OFFSET)/$( this ).width())*100;
+            var car = getCarInfo();
+            var l, h, correct;
+            if (car.fe <=15) {
+              console.log(car.fe, car.fe <=15);
+              l = -3;
+              h = 16;
+              correct = "right_bad";
+            }
+            else if (car.fe > 15 && car.fe <= 18){
+              l = 18;
+              h = 36;
+              correct = "right_kinda_bad";
+            }
+            else if (car.fe > 18 && car.fe <=20 ) {
+              l = 37;
+              h = 56;
+              correct = "right_middle";
+            }
+            else if (car.fe > 20 && car.fe <= 24) {
+              l = 58;
+              h = 76;
+              correct = "right_kinda_good";
+            }
+            else if (car.fe > 24) {
+              l = 78;
+              h = 92;
+              correct = "right_good";
+            }
+            if (percentage > l && percentage < h) {
+              console.log("correct");
+              $(".fe_percent").html(car.score);
+              $(".fe").html(car.fe);
+              $(".result").hide();
+              $("#" + correct).show();
+            } else if (percentage < l) {
+              // guessed too low
+              $(".result").hide();
+              $("#low").show();
+              console.log("wrong");
+            } else if (percentage > h) {
+              $(".result").hide();
+              $("#high").show();
+            }
+          }
+        });
+
+        // Set up selection and button handlers
+        document.getElementById("manufacturer").onchange = function(e) {
+          var mfr = $("#manufacturer")[0].options[e.target.selectedIndex].value
+          $("#carType").html("");
+          $("#carType").append("<option disabled>Car Make and Model</option>");
+          getCarOptions(mfr).forEach(function(c) {
+            $("#carType").append("<option>" + c.car + "</option>");
+          });
+        };
+
+        document.getElementById("carType").onchange = function(e) {
+          $(".result").hide();
+          var mfr = $("#manufacturer")[0].options[$("#manufacturer")[0].selectedIndex].text
+          var car = $("#carType")[0].options[$("#carType")[0].selectedIndex].text
+          $("#draggable").html("");
+          $("#draggable").attr("style", "position: relative;left:0px;top:0px;");
+          $("#carContainer").append($("#draggable"));
+          $("#draggable").append("<img src='../img/yCar.png'/><center><label class='carLabel'>" + mfr + "</label></center>");
+          
+          $( "#garage").show();
+          Logger.log({"event": "car_manufacturer", mfr});
+          Logger.log({"event": "car_type", car});
+        }
+      });
+
+    </script>
+  </head>
+  <body>
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-7">
+        <div id="carSelection">
+          <p>Choose your car</p>
+          <select class="select" name="manufactuer" id="manufacturer">
+            <option disabled> Manufacturer </option>
+          </select>
+          <select class="select" name="carType" id="carType">
+            <option disabled> Model </option>
+          </select>
+          <br>
+        </div>
+      </div>
+      <div class="column is-3" id="garage">
+        <p style="padding:10px;">Drag your car to its place on the scale below!</p>
+      </div>
+      <div class="column is-2" id="carContainer">
+        <div id="draggable"></div>
+      </div>
+      <div class="column is-12">
+        <div id="droppable">
+          <!-- ["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"] -->
+          <div class="percentile" value="0" style="background:#edf8e9;text-align:center;">
+            <p class="percentile_label">0%<br/><b>Least Efficient</b></p>
+          </div>
+          <div class="percentile" value="25" style="background:#bae4b3;text-align:center;">
+            <p class="percentile_label">25%<br/><b>&nbsp;</b></p>
+          </div>
+          <div class="percentile" value="50" style="background:#74c476;text-align:center;">
+            <p class="percentile_label">50%<br/><b>&nbsp;</b></p>
+          </div>
+          <div class="percentile" value="75" style="background:#31a354;text-align:center;color:white;">
+            <p class="percentile_label">75%<br/><b>&nbsp;</b></p>
+          </div>
+          <div class="percentile" value="100" style="background:#006d2c;text-align:center;color:white;">
+            <p class="percentile_label">100%<br/><b>Most Efficient</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <br>
+          <div class="result" id="low">Your car is greener than you think. Click and drag your car to try again!</div>
+          <div class="result" id="right_bad"><h1 class="title">Good job, you got it!</h1> This car has a fuel efficiency of <span class="fe"></span> miles per gallon, which places it among the least-efficient cars in our database. This means that you're not only making the environment worse, but also that you're spending a lot more on fuel! Not to worry, companies are introducing more and more fuel efficient cars. Consider one the next time you buy a car!</div>
+          <div class="result" id="right_kinda_bad"><h1 class="title">Good job, you got it!</h1> This car has a fuel efficiency of <span class="fe"></span> miles per gallon, which makes it slightly less fuel efficient than average. Not to worry, companies are introducing more and more fuel efficient cars. Consider one the next time you buy a car!</div>
+          <div class="result" id="right_middle"><h1 class="title"></h1> This car has a fuel efficiency of <span class="fe"></span> miles per gallon, which makes it roughly average amongst the cars in our database. You’re car is just about average, but it can still be better. Companies are introducing more and more fuel efficient cars. Consider one the next time you buy a car!</div>
+          <div class="result" id="right_kinda_good"><h1 class="title">Good job, you got it!</h1> This car has a fuel efficiency of <span class="fe"></span> miles per gallon, which makes it more fuel efficient than average for the cars in our dataset. Keep up the good work!</div>
+          <div class="result" id="right_good"><h1 class="title">Good job, you got it!</h1> This car has a fuel efficiency of <span class="fe"></span> miles per gallon, which makes it one of the most fuel efficient cars in our dataset. Keep up the good work!</div>
+          <!-- <p class="result" id="high">Good guess, you’re so close! Click and drag your car to try again!</p> -->
+          <div class="result" id="high">Unfortunately, this was too optimistic a guess. Click and drag your car to try again!</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
