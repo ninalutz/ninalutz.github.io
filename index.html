@@ -15,6 +15,7 @@
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/lightbulb.css" rel="stylesheet">
 
 
     <!-- modernizr -->
@@ -48,18 +49,27 @@
         <!-- box-intro -->
         <section class="box-intro">
             <div class="table-cell">
-                <h1 class="box-headline letters rotate-2">
-                    <span class="box-words-wrapper">
-                        <b class="is-visible">design.</b>
-                        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding.</b>
-                        <b>algorithms.</b>
-                    </span>
-		        </h1>
-                <h4>Welcome to my part of the internet.</h4>
+
+                <div id="lampadario">
+                    <input type="radio" name="switch" value="on" />
+                    <input type="radio" name="switch" value="off" checked="checked"/>
+                    <label for="switch"></label>
+                    <div id="filo"></div>
+                    <div id="lampadina">             
+                      <div id="sorpresa">
+                        <div id="welcome">
+                            Welcome to Nina's part of the internet!
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
                 <br>
                 <br>
                 <br>
-                <div id = "button"> <img src="img/down.png" style="width:100px;height:90px;"> </div>
+                <br>
+                
+                <div id = "button"> <img src="img/down.png" style="width:100px;height:90px;cursor:pointer" onclick="fadeAway()"> </div>
             </div>
         </section>
         <!-- end box-intro -->
@@ -263,6 +273,11 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        function fadeAway() {
+            document.getElementById("welcome").style.opacity = "0";
+        }
+    </script>
 
 </body>
 
