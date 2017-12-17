@@ -11,8 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+<!-- 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
 	</head>
 	<body>
 
@@ -75,10 +77,14 @@
 
 						<h2>Electronics and Fabrication</h2>
 						<p>For electronics we utilized addressible LEDs, a servo, and power management components such that we could localize everything to a central 12V power supply but use buffers to provide less voltage to some components. The electronics themselves can be wired to a Raspberry Pi or microcontroller and were installed into the wardrobe itself. </p>
-						<p></p>
+						<p>We fabricated the wardrobe from wooden panels and 2x4 beams. This shell is composed as seen below.</p>
+
+						<p>We then fabricated a door frame to hold a monitor. We hung this door frame on a rolling door track we purchased from a hardware store. We placed the door on this track such that it rolled along and held up the monitor. To motorize this track we added a rack and pinion we purchased.
 
 						<h2>Interactions</h2>
 						<p></p>
+
+
 
 						</div>
 						</div>
@@ -107,6 +113,7 @@
 								<section>
 									<span class="icon major fa-desktop"></span>
 									<h3>Photos</h3>
+									<p> Some lovely photos of our progress can be found <a href = "photos">here</a>. </p>
 								</section>
 							</div>
 						</div>
@@ -128,6 +135,35 @@
 			</div>
 
 		<!-- Scripts -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
