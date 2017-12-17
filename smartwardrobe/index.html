@@ -25,6 +25,9 @@
 						<ul>
 							<li><a href="#intro">Smart Wardrobe</a></li>
 							<li><a href="#one">About</a></li>
+							<li><a href="#software">Software</a></li>
+							<li><a href="#electronics">Electronics and Fabrication</a></li>
+							<li><a href="#inter">Interactions</a></li>
 							<li><a href="#two">Files and Materials</a></li>
 							<li><a href="#three">Future Work</a></li>
 						</ul>
@@ -66,52 +69,89 @@
 						<p>Below is the system diagram we intended for this prototype. </p>
 						<p><img src="systemdiagram.png"  width="100%""  style="PADDING-LEFT: 15px; PADDING-RIGHT: 15px;PADDING-BOTTOM: 15px"></p>
 
-
-						<h2>Software</h2>
-						<p>Currently the software consists of two Processing scripts.<a href = "https://www.processing.org">Processing</a> is an open source framework for rapid prototyping. Using UDP communication we trasmit data via wifi from a heavy backend script to the light front end script that the user interacts with. This is becuase we designed the front end script to be run on a 32 bit Raspberry Pi. </p>
-
-						<p>The front end script runs the voice cues, GUI visualizations, and the state machine like logic to call upon the door to move. The back end handles the OpenCV set up for clothing inventory, HTTP requests to Google Calendar API, LEAP motion handling, and the UDP connection.</p>
-
-						<p>For our demo we used our laptops due to the finals season appropriate Raspberry Pi shortage. It is hardcoded as this change delayed the rest of our system implementation.</p>
-
-						<h2>Electronics and Fabrication</h2>
-						<p>For electronics we utilized addressible LEDs, a servo, and power management components such that we could localize everything to a central 12V power supply but use buffers to provide less voltage to some components. The electronics themselves can be wired to a Raspberry Pi or microcontroller and were installed into the wardrobe itself. </p>
-
-						<p>We fabricated the wardrobe from wooden panels and 2x4 beams. This shell is composed as seen below.</p>
-						<img src="shell.png" width="100%">
-
-						<p></p>
-						<img src="photos/fab1.jpg" width="50%"><img src="photos/fab2.jpg" width="50%">
-						<p>Above; some fabrication photos, shell drawing. </p>
-
-						<p>We then fabricated a door frame to hold a monitor. We hung this door frame on a rolling door track we purchased from a hardware store. We placed the door on this track such that it rolled along and held up the monitor. To motorize this track we added a rack and pinion we purchased from McMaster Carr. At first we had used a laser cut version and while this worked for the frame and assured us the mechanism would work, the acrylic couldn't quite handle the full torque.</p>
-
-						<img src="photos/metalrack.jpg" width="50%"><img src="photos/firstrack.jpg" width="50%">
-						<p>Above; the final rack and pinion system and laser cut version.</p>
-
-						<p>Along with the rack and pinion were the lights and microcontrollers to handle the electronics. The lights were installed in various parts of the wardrobe in the hopes of adding more interaction and guiding users to the correct clothes in a timely manner. There is also a camera installed to see the clothes and feed to the main computer for the OpenCV code.</p>
-
-						<p>The user interacts with the mirror. There is a monitor in the door frame covered by a piece of acrylic that is half silvered in order to achieve this smart mirror effect. This was achieved by using acrylic and tightly pressing car window tint to it. There is a LEAP motion sensor mounted on the door to enable gesture control, as no one wants a smudged mirror.</p>
-						<img src="photos/pic5.jpg" width="100%">
-						<img src="photos/pic11.jpg" width="100%">
-						<img src="photos/pic9.jpg" width="100%">
-						<p>Above; a more close up look at the mirror, some mounting of LEDs, and a mounted camera.</p>
-
-						<p>Below is the diagram for the final system as well as some photos of the prototype we actually demoed on the 13th.</p>
-						<img src="photos/pic6.jpg" width="100%">
-						<img src="photos/pic2.jpg" width="100%">
-						<img src="photos/pic3.jpg" width="100%">
-
-						<h2>Interactions</h2>
-						<p>Currently the interaction thread revolves around a user getting up in the morning by the alarm of the wardrobe, swiping away the alarm, and getting an outfit recommendation with the voice assistant and cue-ing LEDs. Below is a marked up model with the GUI in green, the LEDs in purple, power brick in light blue, and motion sensor in pink.</p>
-
-						<img src="ward3D.png" width = "80%">
-
 						</div>
 						</div>
 						</section>
 
 					</section>
+
+
+				<!-- Three -->
+					<section id="software" class="wrapper style2 spotlights">
+						<section>
+
+							<div class="content">
+								<div class="inner">
+									<h2>Software</h2>
+									<p>Currently the software consists of two Processing scripts.<a href = "https://www.processing.org">Processing</a> is an open source framework for rapid prototyping. Using UDP communication we trasmit data via wifi from a heavy backend script to the light front end script that the user interacts with. This is becuase we designed the front end script to be run on a 32 bit Raspberry Pi. </p>
+
+									<p>The front end script runs the voice cues, GUI visualizations, and the state machine like logic to call upon the door to move. The back end handles the OpenCV set up for clothing inventory, HTTP requests to Google Calendar API, LEAP motion handling, and the UDP connection.</p>
+
+									<p>For our demo we used our laptops due to the finals season appropriate Raspberry Pi shortage. It is hardcoded as this change delayed the rest of our system implementation.</p>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<!-- Three -->
+					<section id="electronics" class="wrapper style2 spotlights">
+						<section>
+
+							<div class="content">
+								<div class="inner">
+
+								<h2>Electronics and Fabrication</h2>
+								<p>For electronics we utilized addressible LEDs, a servo, and power management components such that we could localize everything to a central 12V power supply but use buffers to provide less voltage to some components. The electronics themselves can be wired to a Raspberry Pi or microcontroller and were installed into the wardrobe itself. </p>
+
+								<p>We fabricated the wardrobe from wooden panels and 2x4 beams. This shell is composed as seen below.</p>
+								<img src="shell.png" width="100%">
+
+								<p></p>
+								<img src="photos/fab1.jpg" width="50%"><img src="photos/fab2.jpg" width="50%">
+								<p>Above; some fabrication photos, shell drawing. </p>
+
+								<p>We then fabricated a door frame to hold a monitor. We hung this door frame on a rolling door track we purchased from a hardware store. We placed the door on this track such that it rolled along and held up the monitor. To motorize this track we added a rack and pinion we purchased from McMaster Carr. At first we had used a laser cut version and while this worked for the frame and assured us the mechanism would work, the acrylic couldn't quite handle the full torque.</p>
+
+								<img src="photos/metalrack.jpg" width="50%"><img src="photos/firstrack.jpg" width="50%">
+								<p>Above; the final rack and pinion system and laser cut version.</p>
+
+								<p>Along with the rack and pinion were the lights and microcontrollers to handle the electronics. The lights were installed in various parts of the wardrobe in the hopes of adding more interaction and guiding users to the correct clothes in a timely manner. There is also a camera installed to see the clothes and feed to the main computer for the OpenCV code.</p>
+
+								<p>The user interacts with the mirror. There is a monitor in the door frame covered by a piece of acrylic that is half silvered in order to achieve this smart mirror effect. This was achieved by using acrylic and tightly pressing car window tint to it. There is a LEAP motion sensor mounted on the door to enable gesture control, as no one wants a smudged mirror.</p>
+								<img src="photos/pic5.jpg" width="100%">
+								<img src="photos/pic11.jpg" width="100%">
+								<img src="photos/pic9.jpg" width="100%">
+								<p>Above; a more close up look at the mirror, some mounting of LEDs, and a mounted camera.</p>
+
+								<p>Below is the diagram for the final system as well as some photos of the prototype we actually demoed on the 13th.</p>
+								<img src="photos/pic6.jpg" width="100%">
+								<img src="photos/pic2.jpg" width="100%">
+								<img src="photos/pic3.jpg" width="100%">
+
+								</div>
+							</div>
+						</section>
+					</section>
+
+
+				<!-- Three -->
+					<section id="interactions" class="wrapper style2 spotlights">
+						<section>
+
+							<div class="content">
+								<div class="inner">
+						<h2>Interactions</h2>
+						<p>Currently the interaction thread revolves around a user getting up in the morning by the alarm of the wardrobe, swiping away the alarm, and getting an outfit recommendation with the voice assistant and cue-ing LEDs. Below is a marked up model with the GUI in green, the LEDs in purple, power brick in light blue, and motion sensor in pink.</p>
+
+						<img src="ward3D.png" width = "80%">
+
+								</div>
+							</div>
+						</section>
+					</section>
+
+
+
 
 				<!-- Two -->
 					<section id="two" class="wrapper style1 fullscreen fade-up">
