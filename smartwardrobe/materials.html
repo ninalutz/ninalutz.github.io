@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Smart Wardrobe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+<!-- 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="index.html">Back to Home</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+						<div class="content">
+						<h2>Materials</h2>
+						<div class="inner">
+						<h3>Software Libraries</h3>
+						<ul>
+						<li>Processing</li>
+						<li>OpenCV</li>
+						</ul>
+						<br>
+						<h3>Electronics</h3>
+						<ul>
+						<li><a href = "https://www.robotshop.com/en/hsr-2645cr-continuous-rotation-digital-robot-servo.html">Servo</a></li>
+						<li>Arduino UNO (for demo and prototyping)</li>
+						<li>Raspberry Pi Model 3 B</li>
+						<li>32 GB MicroSD Card</li>
+						<li>Addressable RGB LED strips and connectors</li>
+						<li>Solderless crimpers - we did not use these and should have. </li>
+						<li>Wires and jumper cables</li>
+						<li>Bread boards</li>
+						</ul>
+						<br>
+						<h3>Physical</h3>
+						<li><a href = "https://www.robotshop.com/en/hsr-2645cr-continuous-rotation-digital-robot-servo.html">Rack</a> and <a href = "https://www.mcmaster.com/#catalog/123/1119/=1apsi1w">pinion</a></li>
+						<li>Wood. Dimensions are flexible. Our planks were 17 inches wide by 75 tall.</li>
+						<li>Wood glue, deck screws, other carpentry materials</li>
+
+						</div>
+						</div>
+						</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
