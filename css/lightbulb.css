@@ -89,7 +89,7 @@ input[value="on"]:checked + input[value="off"] {
 
 label {
     display: initial;
-    max-width: none; 
+    max-width: none;
     width: 51px;
     height: 51px;
     top: 164px;
@@ -106,7 +106,7 @@ label {
         -ms-animation: oscillaLampadina .9s ease-in-out 0s infinite alternate;
          -o-animation: oscillaLampadina .9s ease-in-out 0s infinite alternate;
             animation: oscillaLampadina .9s ease-in-out 0s infinite alternate;
-}           
+}
 input[value="off"]:checked ~
 label {
     background: rgba(255,211,0,0.1);
