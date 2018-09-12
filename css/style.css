@@ -1123,6 +1123,7 @@ textarea:focus {
     color: #ff3333;
 }
 
+.tab { margin-left: 40px; }
 
 /* Responsive media queries
 ==================================================*/
