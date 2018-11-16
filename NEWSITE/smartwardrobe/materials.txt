@@ -1,0 +1,11 @@
+Software Libraries
+
+Electronics
+Servo
+Arduino UNO (for demo and prototyping)
+Raspberry Pi Model 3 B
+32 GB MicroSD Card
+
+
+Physical
+Rack and pinion
