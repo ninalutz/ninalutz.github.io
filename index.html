@@ -25,17 +25,38 @@
 </head>
 
 <body>
+
+
     <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
             <div class="box-logo">
-                <a href="index.html"><img src="img/logo.png" width="200" alt="Logo"></a>
+                <a href="index.html"><img src="img/logo.png" width="140" alt="Logo"></a>
+<!--                 <p class="rightpar"><a href="index.html">work</a> / <a href="about.html">about</a></p> -->
             </div>
+        </header>
+        <!-- end box-header -->
+
+    </div>
+
+<!-- 	<div class="top-bar">
+        <h1>Nina Lutz</h1>
+    </div> -->
+    <!-- end Top bar -->
+
+    <!-- Main container -->
+     <div class="container main-container clearfix" id = "about"></div>
+
 
 	<div classs = "main" id = "proj">
+			<p> </p>
+			<p> </p>
             <div class="box-logo">
-            <p>I'm a grad student at the <a href = "https://media.mit.edu">MIT Media Lab</a>. I'm in the <a href = "https://www.media.mit.edu/groups/object-based-media/overview/">Object Based Media Group</a>. I think about spatial problems and cosmetics a lot. Not outer space, though.</p>
+            <p>Hi, I'm Nina Lutz. I'm a grad student at the <a href = "https://media.mit.edu">MIT Media Lab</a>. I'm in the <a href = "https://www.media.mit.edu/groups/object-based-media/overview/">Object Based Media Group</a>. I think about spatial problems and cosmetics a lot. Not outer space, though.</p>
 			<p>I studied Computer Science and Design for undergrad at MIT, hanging out in Stata and studio. While earning my S.B, I spent 3 years at the Media Lab in <a href = "https://www.media.mit.edu/groups/city-science/overview/">City Science</a>, where I did research with LEGOs and algorithms around architecture and city planning under <a href = "https://ira.mit.edu">Ira Winder</a>. Between this I also spent a summer at Apple in Cupertino. I've also been president of an MIT dormitory and still give the occasional tour to prospective students via the Admissions office.</p>
 			<p> I also live on <a href = "https://www.instagram.com/ninalikespi">Instagram</a>, <a href = "https://www.twitter.com">Twitter</a>, and <a href = "https://media.mit.edu/people/nlutz"> my lab page </a>. Come hang out or <a href = "mailto:nlutz@media.mit.edu">email me.</a></p>
-            <b>I am updating my work and CV and all those nice professional things. This website will be in constant flux for a bit, so please be patient and <a href = "mailto:nlutz@media.mit.edu">email me</a> with questions.</b>
+
+            <b> Here is a <a href = "CV.pdf">CV</a> and <a href = "Resume.pdf">one page resume</a>. I am still updating this website so it will be in constant flux for a bit, so please be patient and <a href = "mailto:nlutz@media.mit.edu">email me</a> with questions.</b>
 
             </div>
 
@@ -49,12 +70,12 @@
                         <ul class="portfolio_filter">
                         	<li><a href="" data-filter=".cur">Current</a></li>
                         	<li><a href="" class="active" data-filter="*">All</a></li>
-<!--                             <li><a href="" data-filter=".alg">Algorithms and Models</a></li> -->
                             <li><a href="" data-filter=".art">Art</a></li>
-                            <li><a href="" data-filter=".arch">Architecture</a></li>
+                            <li><a href="" data-filter=".arch">Architectural</a></li>
+                            <li><a href="" data-filter=".comp">Computation</a></li>
                             <li><a href="" data-filter=".objects">Objects</a></li>
-                            <li><a href="" data-filter=".tool">Tools</a></li>
-                            <li><a href="" data-filter=".pixels">Pixels</a></li>
+<!--                             <li><a href="" data-filter=".research">Research</a></li> -->
+                            <li><a href="" data-filter=".pixels">Viz</a></li>
                             <li><a href="" data-filter=".u">Undergrad Archive</a></li>
                         </ul>
                     </nav>
@@ -65,7 +86,7 @@
                 <div class="no-padding portfolio_container clearfix" >
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 cur art arch">
+                <div class="col-md-3 col-sm-6 cur art">
                     <a href="Projects/TurningLight/turninglight.html" class="portfolio_item">
                         <img src="img/thumbnails/sam.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
@@ -80,14 +101,14 @@
                 </div>
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 cur arch">
+                <div class="col-md-3 col-sm-6 cur arch research comp">
                     <a href="Projects/CosmeticLight/blankproj.html" class="portfolio_item">
                         <img src="Projects/CosmeticLight/background.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
                                     <span>Pigments and Lumens</span>
-                                    <em>Research / Architecture</em>
+                                    <em>Research / Architecture / Computation</em>
                                 </div>
                             </div>
                         </div>
@@ -109,9 +130,24 @@
                 </div>
 
                 <!-- single work -->
+                <div class="col-md-3 col-sm-6 art objects">
+                    <a href="Projects/Coral/blankproj.html" class="portfolio_item">
+                        <img src="img/thumbnails/coralmuseo.jpeg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Connected Coral</span>
+                                    <em>Art / Objects</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- single work -->
                 <div class="col-md-3 col-sm-6 cur arch">
                     <a href="Projects/BigBar/blankproj.html" class="portfolio_item">
-                        <img src="Projects/BigBar/tab.png" alt="image" class="img-responsive" />
+                        <img src="img/thumbnails/bar.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -137,22 +173,6 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 u">
-                    <a href="Projects/GeoBits/geobits.html" class="portfolio_item">
-                        <img src="img/thumbnails/geobits.JPG" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>GeoBits</span>
-                                    <em>GIS and Urban Planning / Tangible Interface / Research / Data Visualization / Software</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 u objects">
                     <a href="Projects/LSystems/lsystems.html" class="portfolio_item">
@@ -204,7 +224,7 @@
 
 
                 <!-- single work -->
-                  <div class="col-md-3 col-sm-6 u">
+                  <div class="col-md-3 col-sm-6 u arch">
                     <a href="Projects/SpaceWork/spacework.html" class="portfolio_item">
                         <img src="img/thumbnails/spacework.JPG" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
@@ -284,6 +304,7 @@
                 </div>
                 <!-- end single work -->
 
+
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 u pixels">
                     <a href="Projects/Paris/paris.html" class="portfolio_item">
@@ -300,21 +321,7 @@
                 </div>
                 <!-- end single work -->
 
-                <!-- single work -->
-                  <div class="col-md-3 col-sm-6 u">
-                    <a href="Projects/Wardrobe/wardrobe.html" class="portfolio_item">
-                        <img src="img/thumbnails/wardrobe.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Interactive Wardrobe</span>
-                                    <em>Tangible Interface / Software / Architecture / Electronics / Fabrication </em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
+
 
 
                                 <!-- single work -->
@@ -447,6 +454,7 @@
                 </div>
                 <!-- end single work -->
 
+
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 u">
                     <a href="Projects/TrafficModeling/traffic.html" class="portfolio_item">
@@ -504,6 +512,40 @@
                                 <div class="item_info">
                                     <span>Andorra</span>
                                     <em>Data Visualization / Algorithms / GIS and Urban Planning / Research</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                                <!-- single work -->
+                  <div class="col-md-3 col-sm-6 u">
+                    <a href="Projects/Wardrobe/wardrobe.html" class="portfolio_item">
+                        <img src="img/thumbnails/wardrobe.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Interactive Wardrobe</span>
+                                    <em>Tangible Interface / Software / Architecture / Electronics / Fabrication </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 u">
+                    <a href="Projects/GeoBits/geobits.html" class="portfolio_item">
+                        <img src="img/thumbnails/geobits.JPG" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>GeoBits</span>
+                                    <em>GIS and Urban Planning / Tangible Interface / Research / Data Visualization / Software</em>
                                 </div>
                             </div>
                         </div>
