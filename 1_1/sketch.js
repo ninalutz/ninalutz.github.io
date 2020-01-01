@@ -12,7 +12,7 @@ function draw() {
   system.addParticle();
   system.run();
   fill(255);
-  text("1.1.2019", 10, height - 20);
+  text("1.1.2020", 10, height - 20);
 }
 
 // A simple Particle class
