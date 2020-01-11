@@ -26,7 +26,7 @@ function draw() {
     spins[i].run();
   }
   fill(255);
-  text("1.13.2020", 10, height - 20);
+  text("1.11.2020", 10, height - 20);
 }
 
 class Spinner{
