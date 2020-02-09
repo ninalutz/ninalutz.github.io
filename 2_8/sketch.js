@@ -17,7 +17,7 @@ function setup() {
     spins.push(spin);
   }
 
- 
+ frameRate(15);
 }
 
 function draw() {
