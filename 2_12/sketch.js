@@ -46,8 +46,8 @@ class Spinner{
     this.angle = 0;
   }
   update(){
-    this.x= (this.radius * cos(this.theta) + this.center.x);
-    this.y = (this.radius * sin(this.theta) + this.center.y);
+    this.x= sin(this.theta);
+    this.y = cos(this.theta);
     this.theta += this.vel;
     // this.size += cos(this.theta)*2;
   }
@@ -56,7 +56,7 @@ class Spinner{
     noStroke();
     var ang = this.angle+ 1;
     rotate(this.direction*sin(ang));
-    ellipse(this.x, this.y, this.size, this.size);
+    ellipse(this.x*this.radius, this.y*this.radius, this.size, this.size);
     rotate(-this.direction*sin(ang));
     this.size += 1;
     if(this.size >= 200) this.size = 5;
