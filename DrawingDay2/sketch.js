@@ -23,12 +23,21 @@ function draw() {
   noStroke();
   fill(0, 0, 0, 5);
   rect(0, 0, width, height);
-  if(second() > 0 && second() <410)numDrawings = 2;
-  if(second() >= 10 && second() < 20) numDrawings = 4;
-  if(second() >= 20 && second() < 30) numDrawings = 6;
-  if(second() >= 30 && second() < 40) numDrawings = 8;
-  if(second() >= 40 && second() < 50) numDrawings = 10;
-  if(second() >= 50 && second() < 60) numDrawings = 10;
+  if(second() > 0 && second() < 5)numDrawings = 2;
+  if(second() >= 5 && second() < 10) numDrawings = 4;
+  if(second() >= 10 && second() < 15) numDrawings = 6;
+  if(second() >= 15 && second() < 20) numDrawings = 8;
+  if(second() >= 20 && second() < 25) numDrawings = 10;
+  if(second() >= 25 && second() < 30) numDrawings = 12;
+  if(second() >= 30 && second() < 35) numDrawings = 14;
+  if(second() >= 35 && second() < 40) numDrawings = 16;
+  if(second() >= 40 && second() < 45) numDrawings = 18;
+  if(second() >= 45 && second() < 50) numDrawings = 20;
+  if(second() >= 50 && second() < 55) numDrawings = 22;
+  if(second() >= 55 && second() < 60) numDrawings = 24;
+
+  fill(255);
+  text(second(), 50, 50)
 }
 
 // Calculate the symmetric of a point with respect to a line defined by a point(c) and a vector(u)
