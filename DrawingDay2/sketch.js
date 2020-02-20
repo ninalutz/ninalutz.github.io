@@ -35,9 +35,6 @@ function draw() {
   if(second() >= 45 && second() < 50) numDrawings = 20;
   if(second() >= 50 && second() < 55) numDrawings = 22;
   if(second() >= 55 && second() < 60) numDrawings = 24;
-
-  fill(255);
-  text(second(), 50, 50)
 }
 
 // Calculate the symmetric of a point with respect to a line defined by a point(c) and a vector(u)
