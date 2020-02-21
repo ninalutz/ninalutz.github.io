@@ -3,7 +3,7 @@ var numDrawings = 2 // Even numbers work better
 var lineWeight = 2
 
 function setup() {
-  createCanvas(800, 800)
+  createCanvas(windowWidth, windowHeight)
   center = createVector(width/2,height/2);
 }
 
@@ -25,6 +25,7 @@ function draw() {
   noStroke();
   fill(0, 0, 0, 5);
   rect(0, 0, width, height);
+
   incrementDrawing();
 }
 
