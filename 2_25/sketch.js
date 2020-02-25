@@ -29,6 +29,10 @@ function draw() {
     p.x = newPX;
     p.y = newPY;
   }
+  noStroke();
+  fill(255);
+  text("2.25.20", 50, height - 50);
+  stroke(255, 10);
 }
 
 function mouseDragged() {
