@@ -13,7 +13,6 @@ function draw() {
   // buggy
   // copy(0, 0, width, height, 0, -1, width, height);
 
-
   loadPixels();
   for(var i=0; i<pixels.length-width; i++) {
     pixels[i] = pixels[i+width];
