@@ -43,7 +43,7 @@ function draw() {
       y = simplex.noise4D(cos(a) * ns, sin(a) * ns, 2.5 + frameCount * ts, i*0.01) * size;
       
    //   verts.push(createVector(x,y));
-      ellipse(x,y, 20, 20);
+      ellipse(x,y, 15, 15);
     }
     // beginShape();
     // for(var r = 0; r < c; r++){
