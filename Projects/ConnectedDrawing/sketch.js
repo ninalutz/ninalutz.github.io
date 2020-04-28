@@ -20,14 +20,14 @@ function draw() {
   fill(255);
   textSize(20)
   text("Welcome to drawing Mad Libs!", 40, 50);
-  text("Draw a small drawing for the prompt, press d when done to get the next prompt", 40, 100)
+  text("Draw a small drawing each step. Press d to continue. Current step: " + prompt + "/6", 40, 100)
   stroke(255);
   line(0, 110, width, 115);
 
   //Prompt
   if(prompt == 1){
     noStroke();
-    text("Draw a SINGULAR NOUN below in box, press 'd' when done", 40, 150);
+    text("Draw a SINGULAR NOUN below in box, press 'd' when done ", 40, 150);
     stroke(255)
       if (mouseIsPressed === true) {
           line(mouseX, mouseY, pmouseX, pmouseY);
