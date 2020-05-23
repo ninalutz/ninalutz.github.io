@@ -27,7 +27,7 @@ function setup() {
 function draw() {
 
   blendMode(BLEND);
-  background(255, 50)
+  background(0, 50)
      fill(0);
   noStroke()
   text("5.17.20", 30, height - 30)
