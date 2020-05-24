@@ -4,7 +4,7 @@ let speed = 50.0;
 
 let myFont;
 function preload() {
-  myFont = loadFont('Ligconsolata-Regular.otf');
+  myFont = loadFont('assets/Inconsolata-Regular.otf');
 }
 
 function setup() {
@@ -12,7 +12,7 @@ function setup() {
   background(0);
   textFont(myFont);
   textSize(14);
-
+  textAlign(CENTER, CENTER);
   let num = 30;
   for(let i=0; i<num; i++){
     let shape = new Shape(i, num, width, width, color(255, 0, 0));
@@ -32,7 +32,7 @@ function draw() {
   }
   
   curTime += deltaTime * 0.001;
-
+  fill(255)
   text("5.23.20", 30, height-30)
 
 }
