@@ -914,6 +914,7 @@ footer img {
     background-attachment: fixed;
     background-position: center center;
     text-align: center;
+    padding:4em;
 }
 
 .top-bar h1 {
