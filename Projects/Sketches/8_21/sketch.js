@@ -1,7 +1,7 @@
 var r=200;
 var s=0.002;
 function setup() { 
-  createCanvas(600, 600);
+  cnv = createCanvas(600, 600);
   background(255)
 }
 function draw() {   
@@ -28,4 +28,9 @@ function draw() {
   text("8.21.20", 30, height-30);
   noFill();
 }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
 

@@ -13,7 +13,7 @@ var colors;
 var type;
 
 function setup() {
-  createCanvas(600, 600)
+  cnv = createCanvas(600, 600)
   
   colors = [
     color(255, 0, 0),
@@ -64,4 +64,9 @@ function draw() {
 //   } else {
 //     type = 0;
 //   }
+// }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
 // }

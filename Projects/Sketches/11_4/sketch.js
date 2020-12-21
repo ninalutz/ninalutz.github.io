@@ -7,7 +7,7 @@ var connections = [];
 var hu = 200;
 
 function setup() {
-    createCanvas(600, 600);
+    cnv = createCanvas(600, 600);
     fill(0);
     background(10);
     for (var i = 0; i < 30; i++) {
@@ -70,7 +70,7 @@ function draw() {
     })
     fill(255);
     noStroke()
-    text("11.4.20", 30, height-30)
+   text("11.4.20", 30, height-30)
 }
 
 function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
@@ -116,3 +116,8 @@ function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
     };
     return path;
 }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }

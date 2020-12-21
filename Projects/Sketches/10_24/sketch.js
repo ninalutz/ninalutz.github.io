@@ -1,7 +1,7 @@
 var circle_size = 20;
 
 function setup() {
-    createCanvas(600, 600);
+    cnv = createCanvas(600, 600);
     background(0)
 }
 
@@ -21,5 +21,12 @@ function draw() {
             }
         }
     }
+    fill(255);
+    text("10.24.20", 30, height-30)
 }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
 

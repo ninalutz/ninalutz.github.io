@@ -10,7 +10,7 @@ var a = 1;
 var b = 1;
 
 function setup(){
-  createCanvas(600,600)
+  cnv = createCanvas(600,600)
   globe = new Array((total+1)*(total+1));
 }
 
@@ -70,5 +70,11 @@ function draw(){
 
   fill(255);
   noStroke();
-  text("9.4.20", 30, height-30);
+ text("9.4.20", 30, height-30);
 }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
+

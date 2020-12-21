@@ -50,10 +50,10 @@ body {
     padding-right: 0;
 }
 
-.main-container {
+/*.main-container {
     padding: 20px 0;
 }
-
+*/
 .center {
     text-align: center;
 }
@@ -114,6 +114,9 @@ h5 {
     color: #ff3333;
 }
 
+div{
+    overflow: hidden;
+}
 
 /* preloader
 ==================================================*/
@@ -1179,9 +1182,9 @@ textarea:focus {
     .box-intro h5 {
         font-size: 12px;
     }
-    .main-container {
+/*    .main-container {
         padding: 50px 0;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 420px) {

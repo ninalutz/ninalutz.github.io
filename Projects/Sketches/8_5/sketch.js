@@ -14,7 +14,7 @@ let _rad_offset;
 let lapse = 0;    // mouse timer
 
 function setup() {
-  createCanvas(600, 600);
+  cnv = createCanvas(600, 600);
   // colorMode(HSB, 255);
   frameRate(30);
   background(5);
@@ -22,7 +22,7 @@ function setup() {
   stroke(0, 255);
   noFill();
   _divideNum = 40;
-  _objectNum = 20;
+  _objectNum = 50;
   _noiseSeedRad = random(20);
   _noiseSeedAng = random(10);
   _noiseStepRad = 0.1;
@@ -82,4 +82,9 @@ function draw() {
   text("8.5.20", 30, height-30);
   noFill();
 }
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
 

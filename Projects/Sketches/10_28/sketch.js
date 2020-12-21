@@ -7,13 +7,13 @@ var connections = [];
 var hu = 0;
 
 function setup() {
-    createCanvas(600, 600);
+    cnv = createCanvas(600, 600);
     fill(0);
     // noFill();
     // noStroke();
     
     //generate circles
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 60; i++) {
         circlePaths.push({
             position: createVector(random(width), random(height)),
             radius: i==0 ? 120 : random(100, 120),
@@ -75,7 +75,7 @@ function draw() {
     })
     fill(255);
     noStroke()
-    text("10.28.20", 30, height-30)
+   text("10.28.20", 30, height-30)
 }
 
 function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
@@ -120,4 +120,9 @@ function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
         ]
     };
     return path;
+}
+
+
+function keyPressed() {
+    save(cnv, 'myCanvas.png');
 }

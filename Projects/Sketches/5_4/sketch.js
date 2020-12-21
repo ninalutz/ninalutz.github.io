@@ -1,11 +1,11 @@
 const dots = []
 const factor = -1
-const count = 500
-const size = 500
+const count = 800
+const size = 600
 const radius = size * 0.8 / 2
 
 function setup() {
-  createCanvas(size, size);
+  cnv = createCanvas(size, size);
   background(255);
   noiseDetail(100)
   colorMode(HSB, 100)
@@ -28,7 +28,7 @@ function draw() {
   }
   noStroke()
   fill(0);
-  text("5.4.20", 30, height - 30)
+ text("5.4.20", 30, height - 30)
 }
 
 class Dot {
@@ -72,4 +72,11 @@ class Dot {
 
   }
 }
+
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
+
 

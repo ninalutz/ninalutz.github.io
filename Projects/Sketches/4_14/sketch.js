@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(500, 500);
+  cnv = createCanvas(600, 600);
   background(255);
 }
 var N = 10;
@@ -10,7 +10,7 @@ function draw() {
   background(255, 5);
   fill(0);
   noStroke();
-  text("4.14.20", 30, height - 30);
+ text("4.14.20", 30, height - 30);
 
   noStroke();
   fill(0, 150);
@@ -69,3 +69,7 @@ function draw() {
   else t=0;
 
 }
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }

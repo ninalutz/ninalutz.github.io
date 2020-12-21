@@ -1,7 +1,7 @@
 const dots = []
 const factor = 0.1
 const count = 500
-const size = 500
+const size = 600
 const radius = size * 0.8 / 2
 function setup() {
   createCanvas(size, size);

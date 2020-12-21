@@ -5,7 +5,7 @@ let d = 1.832;
 let scale;
 
 function setup() {
-  createCanvas(600, 600);
+  cnv = createCanvas(600, 600);
   scale = min(width, height)/ 4 * 0.8;
 }
 
@@ -32,3 +32,7 @@ function draw() {
   text("9.14.20", 30, height-30)
     
 }
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }

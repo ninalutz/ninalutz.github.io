@@ -13,7 +13,7 @@ var in_color = false;
 function setup() {
   simplex = new SimplexNoise();
   
-  createCanvas(600, 600);
+ cnv = createCanvas(600, 600);
   background(10);
 }
 
@@ -536,3 +536,10 @@ Better rank ordering method by Stefan Gustavson in 2012.
   }
 
 })();
+
+
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
+

@@ -3,7 +3,7 @@ var theta;
 var maxFrameCount = 200; // frameCount, change for faster or slower animation
 
 function setup() {
-  createCanvas(600, 600);
+  cnv= createCanvas(600, 600);
   noStroke();
   background(0)
 }
@@ -11,7 +11,7 @@ function setup() {
 function draw() {
   background(0, 15);
     fill(255);
-  text("5.11.20", 30, height - 30)
+ text("5.11.20", 30, height - 30)
   translate(width/2, height/2); // translate 0,0 to center
 
   t = frameCount/maxFrameCount;
@@ -33,4 +33,8 @@ function draw() {
     }
   }
 
+}
+
+function keyPressed() {
+    save(cnv, 'myCanvas.png');
 }

@@ -26,7 +26,7 @@ let changeDuration = 1000;
 let lastChange = 0;
 
 function setup() {
-  createCanvas(800, 800)
+  createCanvas(600, 600)
   textAlign(CENTER, CENTER);
   
   xScale = width/20;

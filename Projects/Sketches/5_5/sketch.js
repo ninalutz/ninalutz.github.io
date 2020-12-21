@@ -1,7 +1,7 @@
 const dots = []
 const factor = 20
 const count = 200
-const size = 500
+const size = 600
 const radius = size * 0.8 / 2
 
 function setup() {

@@ -2,7 +2,7 @@ let cells, offset, margin, d;
 let bg;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(600, 600);
   angleMode(DEGREES);
   init();
 }

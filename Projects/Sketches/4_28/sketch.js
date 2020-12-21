@@ -8,11 +8,12 @@ let phi;
 let epsilon = 0.05;
 
 function setup() {
-  createCanvas(size, size);
+  cnv = createCanvas(size, size);
   minPetalSize = floor(size/numPetals);
   outStep = minPetalSize * outFraction;
   phi = sqrt(5)/2;
   frameRate = 60;
+  background(0);
 }
 
 function draw() {
@@ -41,3 +42,7 @@ function draw() {
   noStroke();
   text("4.28.20", 30 - width/2, height-30 - height/2)
 }
+
+// function keyPressed() {
+//     save(cnv, 'myCanvas.png');
+// }
