@@ -10,12 +10,13 @@ let circle_cnt, vertex_cnt;
 var xoff, yoff;
 
 function setup() {
-    createCanvas(800, 800);
+    createCanvas(600, 600);
     xoff = random(50, 70);
     yoff = random(400, 800);
 
     console.log(xoff);
     console.log(yoff);
+
 }
 
 

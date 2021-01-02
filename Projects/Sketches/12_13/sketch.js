@@ -8,7 +8,7 @@ let t = 0.0;
 let r = 0.0;
 
 function setup(){
-  createCanvas(800, 800);
+  createCanvas(600, 600);
   background(0) 
 
 }
@@ -18,10 +18,10 @@ function draw(){
   background(0, 10); //originally 255
   t += 0.01;
   for(r=0.0; r<6.0; r++)
-    f(400.0, 400.0, PI/3.0*float(r), 99.0);
+    f(300.0, 300.0, PI/3.0*float(r), 99.0);
     fill(255);
     noStroke();
-  // text("12.13.20", 30, height-30)
+  text("12.13.20", 30, height-30)
 }
 
 function f(x,y,r,d){

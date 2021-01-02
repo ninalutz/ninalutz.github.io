@@ -22,6 +22,7 @@ function setup() {
   background(255);
   generateNewTree();
   frameRate(5)
+  noLoop();
 }
 
 

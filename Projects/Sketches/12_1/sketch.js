@@ -28,7 +28,7 @@ let generateButton;
 
 function setup() {
 
-    createCanvas(700, 700);
+    createCanvas(600, 600);
     background(0);
     generateSnowflake();
 

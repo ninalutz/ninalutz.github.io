@@ -19,10 +19,10 @@ var count = 0;
 
 
 function setup() {
-  cnv = createCanvas(1000, 1000);
+  cnv = createCanvas(600, 600);
   background(255);
   generateNewTree();
-  // frameRate(5)
+  noLoop();
 }
 
 
@@ -51,7 +51,7 @@ function draw() {
   
   fill(0);
   noStroke();
- // text("11.27.20", 30, height-30)
+ text("11.27.20", 30, height-30)
 }
 
 
