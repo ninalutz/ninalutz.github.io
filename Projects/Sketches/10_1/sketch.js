@@ -45,7 +45,7 @@ function draw() {
   _count ++;
   noStroke()
   fill(255,69,0);
-  text("10.1.20", 30, height-30)
+  // text("10.1.20", 30, height-30)
 }
 
 class f {
