@@ -704,6 +704,9 @@ b i:last-child {
 
 /* portfolio section
 ==================================================*/
+.catintro{
+    padding:30px 30px;
+}
 
 .portfolio .categories-grid span {
     font-size: 30px;
@@ -844,7 +847,7 @@ b i:last-child {
 ==================================================*/
 
 footer {
-    padding: 30px 0;
+    padding: 30px 30px;
     text-align: center;
     background: #f5f5f5
 }
