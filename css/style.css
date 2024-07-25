@@ -786,7 +786,7 @@ b i:last-child {
 .portfolio_item .portfolio_item_hover .item_info span {
     display: block;
     color: #fff;
-    font-size: 30px;
+    font-size: 22px;
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
     -webkit-transition: all .2s ease-in-out .2s;
@@ -807,7 +807,7 @@ b i:last-child {
     -webkit-transition: all .3s ease-in-out .3s;
     transition: all .3s ease-in-out .3s;
     opacity: 0;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 2px;
 }
 
