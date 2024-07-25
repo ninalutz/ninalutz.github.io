@@ -953,6 +953,10 @@ footer img {
     color: #777;
 }
 
+.top-bar h4{
+    font-size:16px;
+}
+
 .top-bar p a {
     color: #777;
 }
@@ -1188,6 +1192,7 @@ textarea:focus {
         font-size: 40px;
         line-height: 30px;
     }
+
     .portfolio .categories-grid .categories ul li {
         float: none;
     }
