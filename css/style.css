@@ -250,7 +250,7 @@ body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    color: #999
+    color: #4C4C4C;
 }
 
 .no-padding {
@@ -681,7 +681,7 @@ b i:last-child {
 .box-intro h5 {
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #999;
+    color: #4C4C4C;
     line-height: 1.7
 }
 
@@ -1155,7 +1155,7 @@ footer img {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color: #4C4C4C;
     line-height: 50px;
 }
 
